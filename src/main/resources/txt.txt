@@ -1,0 +1,16 @@
+1. creamos el repository ⇒ este es una interfaz
+    1. aquí se extiende del CrudRepository
+        1. parametrizamos con la Clase y el tipo de dato de la llave primaria
+    2. se toma la anotación @Repository
+2. creamos el service ⇒ este es una interfaz
+    1. creamos la lista de los métodos que vamos a utilizar
+3. creamos la implementación ⇒ esta es una clase
+    1. ponemos la anotación @Service
+    2. implementamos el servicio creado previamente a la clase
+    3. aquí creamos los métodos dándoles lógica, estos los generamos directamente con el IDE
+    4. aquí se pone la inyección de los repositories con la anotación @Autowired
+4. creamos el controlador ⇒ esta es una clase también
+    1. ponemos la anotación @RestController a la clase
+    2. creamos la ruta principal con el @RequestMappin(”/api”)
+    3. inyectamos las implementaciones que hemos hecho con la anotación @Autowired
+    4. creamos las rutas de los métodos que vamos a utilizar
